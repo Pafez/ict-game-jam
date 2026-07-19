@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b2qqjwbrm7ujo"]
+
+[ext_resource type="Script" uid="uid://b2igp0ame8i6i" path="res://scripts/cursor.gd" id="1_s0nli"]
+[ext_resource type="Texture2D" uid="uid://c1s72c21lfh01" path="res://sprites/zzzIconGodotNode/color/icon_weapon.png" id="2_s0nli"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_k56px"]
+a = Vector2(-5, -5)
+b = Vector2(5, 5)
+
+[node name="Cursor" type="Node2D" unique_id=1942031852]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_s0nli")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=998816568]
+texture = ExtResource("2_s0nli")
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13816342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2055027381]
+position = Vector2(-3, -3)
+shape = SubResource("SegmentShape2D_k56px")

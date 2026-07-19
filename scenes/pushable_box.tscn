@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bvuswc0oa8cxv"]
+
+[ext_resource type="Texture2D" uid="uid://c4xj8ojshejq2" path="res://sprites/zzzIconGodotNode/node_2D/robot.png" id="1_ye30g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
+size = Vector2(14, 15)
+
+[node name="PushableBox" type="RigidBody2D" unique_id=466678680 groups=["pushable"]]
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=117489355]
+texture = ExtResource("1_ye30g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1968280152]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_wp5od")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1794927563]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://csm5p8n0usk0r"]
+
+[ext_resource type="Texture2D" uid="uid://d1i6hijx424b4" path="res://sprites/zzzIconGodotNode/white/icon_gear.png" id="1_jxe1r"]
+
+[node name="SettingsButton" type="Node2D" unique_id=1054415133]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=66798952]
+texture = ExtResource("1_jxe1r")

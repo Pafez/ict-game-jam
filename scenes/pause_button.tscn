@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://co76vujuu55rv"]
+
+[ext_resource type="Texture2D" uid="uid://cu6f6p50chn6" path="res://sprites/zzzIconGodotNode/node_2D/icon_paused.png" id="1_5rmv1"]
+[ext_resource type="Script" uid="uid://b0llsrm286ndq" path="res://scripts/pause_button.gd" id="1_rh5fn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
+size = Vector2(14, 16)
+
+[node name="PauseButton" type="StaticBody2D" unique_id=2083729090 groups=["activatable"]]
+script = ExtResource("1_rh5fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1178989466]
+shape = SubResource("RectangleShape2D_wp5od")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=655940629]
+texture = ExtResource("1_5rmv1")
