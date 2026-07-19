@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bb7i3luua4umb"]
+
+[ext_resource type="Script" uid="uid://cwwxuyqmikcfj" path="res://scripts/speech_bubble.gd" id="1_a8ruc"]
+
+[sub_resource type="Animation" id="Animation_x4eeu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_e1pub"]
+resource_name = "pop_in"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.15, 1.15), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8jen"]
+_data = {
+&"RESET": SubResource("Animation_x4eeu"),
+&"pop_in": SubResource("Animation_e1pub")
+}
+
+[node name="SpeechBubble" type="Node2D" unique_id=14372633]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_a8ruc")
+
+[node name="Panel" type="Panel" parent="." unique_id=805004876]
+offset_right = 71.0
+offset_bottom = 22.0
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Label" type="Label" parent="Panel" unique_id=886088300]
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 23.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2082964220]
+libraries/ = SubResource("AnimationLibrary_a8jen")
+
+[node name="Timer" type="Timer" parent="." unique_id=1719783267]

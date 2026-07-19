@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://r27y2on1628k"]
+
+[ext_resource type="PackedScene" uid="uid://b2qqjwbrm7ujo" path="res://scenes/cursor.tscn" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://bueh6ctijybtd" path="res://scenes/menu_buttons.tscn" id="2_ekxnf"]
+
+[node name="MainMenu" type="Node2D" unique_id=975303666]
+
+[node name="BGimage" type="ColorRect" parent="." unique_id=832520461]
+offset_left = -287.0
+offset_top = -160.0
+offset_right = 287.0
+offset_bottom = 161.0
+color = Color(0.10854573, 0.08346794, 0, 1)
+
+[node name="Title" type="ColorRect" parent="." unique_id=2069460]
+offset_left = -203.0
+offset_top = -118.0
+offset_right = 205.0
+offset_bottom = -55.0
+
+[node name="Cursor" parent="." unique_id=1942031852 instance=ExtResource("1_l6cm7")]
+position = Vector2(82, -26)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=348719016]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1487509365]
+zoom = Vector2(2, 2)
+
+[node name="StartBox" parent="." unique_id=878000811 instance=ExtResource("2_ekxnf")]
+position = Vector2(0, -1)
+
+[node name="SettingsBox" parent="." unique_id=1554869234 instance=ExtResource("2_ekxnf")]
+position = Vector2(0, 45)
+
+[node name="QuitBox" parent="." unique_id=2041666716 instance=ExtResource("2_ekxnf")]
+position = Vector2(0, 92)

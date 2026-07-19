@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cgxexvhguyook"]
+
+[ext_resource type="Texture2D" uid="uid://bjkoyib4w60p2" path="res://zzzIconGodotNode/white/icon_area_meteo.png" id="1_8r2k3"]
+
+[node name="QuitButton" type="Node2D" unique_id=981365590]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=135500799]
+texture = ExtResource("1_8r2k3")
