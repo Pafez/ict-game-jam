@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://co76vujuu55rv"]
 
-[ext_resource type="Texture2D" uid="uid://cu6f6p50chn6" path="res://zzzIconGodotNode/node_2D/icon_paused.png" id="1_5rmv1"]
+[ext_resource type="Texture2D" uid="uid://cu6f6p50chn6" path="res://sprites/zzzIconGodotNode/node_2D/icon_paused.png" id="1_5rmv1"]
 [ext_resource type="Script" uid="uid://b0llsrm286ndq" path="res://scripts/pause_button.gd" id="1_rh5fn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ljkajyjqjx6o"]
 
 [ext_resource type="Script" uid="uid://ws5smgpjb37r" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://c1s72c21lfh01" path="res://zzzIconGodotNode/color/icon_weapon.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://c1s72c21lfh01" path="res://sprites/zzzIconGodotNode/color/icon_weapon.png" id="2_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 8.02773
@@ -17,7 +17,7 @@ script = ExtResource("1_g2els")
 texture = ExtResource("2_g2els")
 flip_h = true
 
-[node name="SwordTip" type="Node2D" parent="Sprite2D" unique_id=1151675161]
+[node name="SwordTip" type="Node2D" parent="Sprite2D" unique_id=1151675161 groups=["player"]]
 position = Vector2(-6.666667, -6.666667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833625694]

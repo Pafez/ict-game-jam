@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2qqjwbrm7ujo"]
 
 [ext_resource type="Script" uid="uid://b2igp0ame8i6i" path="res://scripts/cursor.gd" id="1_s0nli"]
-[ext_resource type="Texture2D" uid="uid://c1s72c21lfh01" path="res://zzzIconGodotNode/color/icon_weapon.png" id="2_s0nli"]
+[ext_resource type="Texture2D" uid="uid://c1s72c21lfh01" path="res://sprites/zzzIconGodotNode/color/icon_weapon.png" id="2_s0nli"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k56px"]
 a = Vector2(-5, -5)

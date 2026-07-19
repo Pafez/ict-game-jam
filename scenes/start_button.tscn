@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djwi5vdndxpmm"]
 
-[ext_resource type="Texture2D" uid="uid://jw2kbsljls51" path="res://zzzIconGodotNode/node_2D/icon_play.png" id="1_pfnhw"]
+[ext_resource type="Texture2D" uid="uid://jw2kbsljls51" path="res://sprites/zzzIconGodotNode/node_2D/icon_play.png" id="1_pfnhw"]
 [ext_resource type="Script" uid="uid://blcwtpnbig0cd" path="res://scripts/start_button.gd" id="1_x8tau"]
 
 [node name="StartButton" type="Node2D" unique_id=324523347]
