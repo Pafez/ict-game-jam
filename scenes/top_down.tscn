@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://42hd4um86awg"]
+
+[ext_resource type="Script" uid="uid://b54thadfh74u4" path="res://scripts/top_down.gd" id="1_kfgps"]
+[ext_resource type="Texture2D" uid="uid://c1s72c21lfh01" path="res://sprites/zzzIconGodotNode/color/icon_weapon.png" id="2_6rbl7"]
+[ext_resource type="Texture2D" uid="uid://d1i6hijx424b4" path="res://sprites/zzzIconGodotNode/white/icon_gear.png" id="3_6rbl7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 8.02773
+
+[sub_resource type="Animation" id="Animation_6rbl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r6bvb"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3926991, 0.7853982, 1.1780972, 1.5707964]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wmtdx"]
+_data = {
+&"RESET": SubResource("Animation_6rbl7"),
+&"walk": SubResource("Animation_r6bvb")
+}
+
+[node name="TopDown" type="CharacterBody2D" unique_id=104640500]
+rotation = -0.7853982
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_kfgps")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=338011475]
+texture = ExtResource("2_6rbl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=808269175]
+position = Vector2(-6.439501, 6.4795413)
+scale = Vector2(0.4769683, 0.48197332)
+texture = ExtResource("3_6rbl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833625694]
+shape = SubResource("CircleShape2D_g2els")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1800938529]
+libraries/ = SubResource("AnimationLibrary_wmtdx")
+autoplay = &"walk"

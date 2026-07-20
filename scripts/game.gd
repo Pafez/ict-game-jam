@@ -4,11 +4,13 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	$Player.enter_form()
+	
 	$Cursor.exit_form()
+	$Glider.exit_form()
+	$TopDown.exit_form()
 
 	FormManager.current_form = $Player
-	FormManager.register($Player, $Cursor)
+	FormManager.register($Player, $Player, $Cursor, $Glider, $TopDown)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

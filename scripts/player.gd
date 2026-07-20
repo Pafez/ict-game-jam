@@ -174,6 +174,7 @@ func _on_jabber_area_body_entered(body):
 func enter_form():
 	visible = true
 	set_physics_process(true)
+	$CollisionShape2D.set_deferred("disabled", false)
 
 	# Reset movement
 	velocity = Vector2.ZERO
@@ -196,6 +197,7 @@ func enter_form():
 func exit_form():
 	visible = false
 	set_physics_process(false)
+	$CollisionShape2D.set_deferred("disabled", true)
 
 func get_spawn_position():
 	return global_position

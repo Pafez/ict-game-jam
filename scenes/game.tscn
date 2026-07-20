@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bvuswc0oa8cxv" path="res://scenes/pushable_box.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cor6pp8c6lxx3" path="res://scenes/temp_platform_moving.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://co76vujuu55rv" path="res://scenes/pause_button.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://ulrgmtagtljl" path="res://scenes/glider.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://42hd4um86awg" path="res://scenes/top_down.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://csm5p8n0usk0r" path="res://scenes/settings_button.tscn" id="11_kvpfn"]
 
 [sub_resource type="Animation" id="Animation_gee14"]
 length = 0.001
@@ -50,7 +53,7 @@ _data = {
 script = ExtResource("1_p57ef")
 
 [node name="Player" parent="." unique_id=104640500 instance=ExtResource("3_lbhrr")]
-position = Vector2(119, -69)
+position = Vector2(214.00002, -69)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=427689636]
 position = Vector2(-1, -81)
@@ -60,7 +63,7 @@ zoom = Vector2(2, 2)
 position = Vector2(191, -58)
 
 [node name="Platform" parent="." unique_id=1140325322 instance=ExtResource("2_lnu2h")]
-position = Vector2(91, 0)
+position = Vector2(84, 57)
 
 [node name="Platform2" parent="." unique_id=8673434 instance=ExtResource("2_lnu2h")]
 position = Vector2(-266, 4)
@@ -80,3 +83,26 @@ autoplay = &"platform_move_up_down"
 
 [node name="PauseButton" parent="." unique_id=49048670 instance=ExtResource("8_gee14")]
 position = Vector2(-177, -50)
+
+[node name="Glider" parent="." unique_id=1395083318 instance=ExtResource("9_0tnpc")]
+position = Vector2(-379.00006, -292.00003)
+rotation_strength = 0.1
+max_rotation = 120.0
+
+[node name="Platform3" parent="." unique_id=1974414834 instance=ExtResource("2_lnu2h")]
+position = Vector2(-409, -202)
+
+[node name="Platform4" parent="." unique_id=1332977446 instance=ExtResource("2_lnu2h")]
+position = Vector2(-169, -202)
+
+[node name="Platform5" parent="." unique_id=1007967510 instance=ExtResource("2_lnu2h")]
+position = Vector2(78, -277)
+
+[node name="Platform6" parent="." unique_id=1938363278 instance=ExtResource("2_lnu2h")]
+position = Vector2(416, -197)
+
+[node name="TopDown" parent="." unique_id=740881975 instance=ExtResource("10_vtaks")]
+position = Vector2(-160, -319)
+
+[node name="SettingsButton" parent="." unique_id=1054415133 instance=ExtResource("11_kvpfn")]
+position = Vector2(89, -60)

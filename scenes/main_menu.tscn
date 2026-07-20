@@ -19,7 +19,7 @@ offset_right = 205.0
 offset_bottom = -55.0
 
 [node name="Cursor" parent="." unique_id=1942031852 instance=ExtResource("1_l6cm7")]
-position = Vector2(82, -26)
+position = Vector2(112, -12)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=348719016]
 

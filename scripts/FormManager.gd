@@ -4,14 +4,20 @@ var current_form = null
 
 var player
 var cursor
+var glider
+var top_down
 
-func register(player_node, cursor_node):
+func register(entry_node, player_node, cursor_node, glider_node, top_down_node, pos = null):
 	player = player_node
 	cursor = cursor_node
+	glider = glider_node
+	top_down = top_down_node
 
-	current_form = player
-	player.enter_form()
-	cursor.exit_form()
+	current_form = entry_node
+	if (pos == null):
+		entry_node.enter_form()
+	else:
+		entry_node.enter_form(null)
 
 func switch_form(new_form, should_set_pos = true):
 
